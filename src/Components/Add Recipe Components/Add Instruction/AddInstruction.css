@@ -1,0 +1,15 @@
+.add-cooking-step{
+  display: grid;
+  grid-template-columns: 1fr 70px;;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 600px) {
+  .add-cooking-step{
+    grid-template-columns: 1fr;
+  }
+}
+
+.add-cooking-step button{
+  border-radius: 5px;
+}

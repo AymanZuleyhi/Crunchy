@@ -1,0 +1,25 @@
+.FOLLOWING-USER{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  gap: 15px;
+  box-shadow: 0px 0px 5px rgba(193, 193, 193, 0.5);
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.FOLLOWING-USER:hover{
+  box-shadow: 0px 0px 5px rgba(188, 188, 188, 0.5);
+}
+.FOLLOWING-USER p{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.FOLLOWING-USER img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}

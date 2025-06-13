@@ -1,0 +1,42 @@
+.OPTIONS_SELECTOR{
+  display: flex;
+  flex-direction: column;
+}
+
+.options_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  row-gap: 0px;
+}
+
+.options_container div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.options_container div:hover{
+  cursor: pointer;
+  background-color: rgba(255, 237, 195, 0.441);
+}
+
+.options_container div svg{
+  color: var(--main-color);
+}
+
+
+@media (max-width: 700px) {
+  .options_container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .options_container{
+    grid-template-columns: 1fr;
+  }
+}

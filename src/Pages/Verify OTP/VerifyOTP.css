@@ -1,0 +1,59 @@
+.VERIFY-OTP{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+  width: 300px;
+  text-align: center;
+}
+
+.VERIFY-OTP button{
+  border-radius: 5px;
+}
+
+.VERIFY-OTP span {
+  font-weight: bold;
+}
+.verify-otp-form{
+  width: 100%;
+  display: grid;
+  gap: 15px;
+}
+
+.verify-otp-form div{
+  display: flex;
+  gap: 5px;
+}
+
+
+/* Input */
+.verify-otp-form input{
+  width: 45px; 
+  height: 40px;
+  border-radius: 5px;
+  border: var(--input-border);
+  text-align: center;
+  font-size: 15px;
+}
+
+.verify-otp-form input:focus,
+.verify-otp-form input:hover{
+  border: var(--input-hover-border);
+  box-shadow: var(--input-hover-shadow);
+}
+
+
+/* Text at the bottom for reseting the OTP and for wrong email. */
+.otp-controls{
+  display: grid;
+  gap: 5px;
+  color: rgb(58, 58, 58);
+  justify-items: center;
+  cursor: pointer;
+}
+.otp-controls p:hover{
+  color: black;
+  text-decoration: underline;
+}

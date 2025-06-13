@@ -1,0 +1,48 @@
+.NAV_BAR{
+  width: 100vw;
+  justify-content: center;
+  background-color: rgb(244, 241, 221);
+  position: fixed;
+  top: 0;
+  height: 70px;
+  z-index: 100;
+}
+
+.nav-bar_container{
+  max-width: 1300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .nav-bar_container{
+    width: 80%;
+  }
+}
+
+.NAV_BAR,
+.nb_controls{
+  display: flex;
+  align-items: center;
+}
+
+.NAV_BAR.notHome{
+  box-shadow: 5px 5px 5px rgba(238, 238, 238, 0.5);
+}
+
+.NAV_BAR.notHome.hide{
+  box-shadow: none;
+}
+
+.nb_controls{
+  gap: 10px;
+}
+
+.nb_controls.hide{
+  visibility: hidden;
+}
+
+.nb_controls p{
+  cursor: pointer;
+}

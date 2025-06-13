@@ -1,0 +1,17 @@
+.CONTENT-BOX{
+  display: grid;
+  gap: 15px;
+  box-shadow: 0px 0px 5px rgba(187, 187, 187, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.content-box_text{
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.CONTENT-BOX .CLICKABLE-TEXT{
+  padding: 10px 0px 0px 10px;
+}

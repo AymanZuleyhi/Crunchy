@@ -1,0 +1,21 @@
+.TEXTAREA textarea{
+  width: 100%;
+  border-radius: var(--input-border-radius);
+  border: var(--input-border);
+  resize: none;
+  max-height: 200px;
+  overflow: auto;
+  min-height: 100px;
+  padding: 10px;
+}
+
+.TEXTAREA textarea:focus{
+  outline: none;
+  border: var(--input-hover-border);
+  box-shadow: var(--input-hover-shadow);
+}
+
+.TEXTAREA p{
+  text-align: right;
+  color: rgb(155, 155, 155);
+}

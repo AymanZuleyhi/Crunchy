@@ -1,0 +1,19 @@
+.ENTER-SECURITY-QUESTION{
+  display: grid;
+  gap: 15px;
+}
+
+.ENTER-SECURITY-QUESTION div{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.ENTER-SECURITY-QUESTION div p{
+  cursor: pointer;
+}
+
+.ENTER-SECURITY-QUESTION div p:hover{
+  text-decoration: underline;
+}

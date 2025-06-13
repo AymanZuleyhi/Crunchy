@@ -1,0 +1,8 @@
+.add-ingredient_container{
+  display: flex;
+  gap: 10px;
+}
+
+.add-ingredient_container button{
+  border-radius: 5px;
+}

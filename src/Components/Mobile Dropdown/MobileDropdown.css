@@ -1,0 +1,15 @@
+.MOBILE-DROPDOWN{
+  display: grid;
+}
+
+.mobile-dropdown_headline{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 36px;
+  padding: 10px;
+  border-radius: 5px;
+
+  cursor: pointer;
+}

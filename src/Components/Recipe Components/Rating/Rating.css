@@ -1,0 +1,40 @@
+.RATING{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating{
+  height: 20px;
+  width: 120px;
+  position: relative;
+}
+
+.rating img{
+  height: 20px;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  z-index: 4;
+}
+
+.rating div:nth-of-type(1){
+  height: 100%;
+  z-index: 3;
+  background-color: var(--main-color);
+  top: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.second-div{
+  position: absolute;
+  background-color: rgb(238, 238, 238);
+  width: 100%;
+  z-index: 2;
+  height: 20px;
+  top: 0;
+  left: 0;
+}

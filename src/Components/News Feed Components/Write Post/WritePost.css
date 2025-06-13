@@ -1,0 +1,28 @@
+.WRITE-POST{
+  background-color: white;
+  width: 400px;
+  z-index: 103;
+  display: grid;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 10px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.write-post_headline{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.write-post_body{
+  display: grid;
+  gap: 15px;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

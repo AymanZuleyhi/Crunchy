@@ -1,0 +1,16 @@
+.SHOW_MORE{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  background-color: rgb(255, 248, 231);
+  padding: var(--button-padding);
+  height: 25px;
+  border-radius: 10px;
+  justify-self: flex-start;
+  width: fit-content;
+}
+
+.SHOW_MORE svg{
+  color: var(--main-color);
+}

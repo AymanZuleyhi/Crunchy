@@ -1,0 +1,24 @@
+.ICON-BUTTON{
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete-account_headline{
+  display: flex;
+  justify-content: space-between;
+}
+.ICON-BUTTON svg{
+  font-size: 20px;
+}
+
+.ICON-BUTTON:hover{
+  background-color: rgba(247, 198, 0, 0.115);
+}

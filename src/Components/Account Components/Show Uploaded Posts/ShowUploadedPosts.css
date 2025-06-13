@@ -1,0 +1,12 @@
+.UPLOADED-POSTS {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px; /* space between rows and columns */
+}
+
+.UPLOADED-POSTS .POST {
+  flex: 0 0 calc(33.333% - 13.333px); /* 100% / 3 - gap/1.5 to balance gaps */
+  box-sizing: border-box;
+}

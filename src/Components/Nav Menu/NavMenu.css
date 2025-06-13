@@ -1,0 +1,45 @@
+.NAV_MENU{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  max-width: 100%;
+  width: 100%;
+  overflow-y: auto;
+  border-bottom: 1px solid rgb(234, 234, 234);
+
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.NAV_MENU div p{
+  font-weight: var(--bold);
+}
+
+.nav-button{
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: 0.4s ease;
+  white-space: nowrap;
+}
+
+.nav-button p{
+  font-size: 16px;
+}
+
+.nav-button div{
+  height: 5px;
+  border-radius: 7px 7px 0px 0px;
+  width: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+}
+
+.nav-button:hover{
+  background-color: rgba(252, 193, 43, 0.148);
+}

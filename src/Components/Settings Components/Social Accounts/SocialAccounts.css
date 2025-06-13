@@ -1,0 +1,17 @@
+.social-media_container{
+  display: grid;
+  gap: 10px;
+}
+
+.social-media_container div{
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-media_container svg{
+  font-size: 25px;
+  width: 25px;
+  color: var(--main-color);
+}

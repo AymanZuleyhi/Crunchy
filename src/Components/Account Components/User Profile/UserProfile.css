@@ -1,0 +1,61 @@
+.USER-PROFILE{
+  display: flex;
+  gap: 30px;
+
+  width: 100%;
+  margin-top: -20px;
+}
+
+.user-info{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.name-and-description{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user_headline{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bio{
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+
+  color: grey;
+}
+
+.name-and-description button{
+  max-width: 100px;
+}
+
+@media (max-width: 600px) {
+  .USER-PROFILE{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .name-and-description{
+    justify-items: center;
+  }
+  .name-and-description p{
+    text-align: center;
+  }
+
+  .name-and-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user_headline{
+    display: grid;
+    justify-items: center;
+  }
+}

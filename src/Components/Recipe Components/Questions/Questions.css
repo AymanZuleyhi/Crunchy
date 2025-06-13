@@ -1,0 +1,29 @@
+.questions_container{
+  display: grid;
+  gap: 20px;
+}
+
+.sort-questions{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 60%;
+}
+
+.sort-questions p {
+  text-wrap: nowrap;
+}
+
+.all-questions{
+  display: grid;
+  gap: 10px;
+}
+
+.questions_controls{
+  display: flex;
+  justify-content: space-between;
+}
+
+.questions_controls.maximum {
+  justify-content: flex-end;
+}

@@ -1,0 +1,9 @@
+.TWO-FACTOR-AUTHENTICATION form{
+  display: grid;
+  gap: 15px;
+
+}
+
+.TWO-FACTOR-AUTHENTICATION form button{
+  border-radius: 5px;
+}

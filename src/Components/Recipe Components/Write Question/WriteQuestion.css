@@ -1,0 +1,22 @@
+.WRITE_QUESTION{
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(133, 133, 133, 0.5);
+  display: grid;
+  gap: 20px;
+  z-index: 120;
+}
+.WRITE_QUESTION button{
+  border-radius: 5px;
+}
+.write-question_headline{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

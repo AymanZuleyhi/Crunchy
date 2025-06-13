@@ -1,0 +1,15 @@
+.LOGO{
+  display: flex;
+  align-items: center;
+}
+
+.LOGO img{
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+}
+
+.LOGO p{
+  font-family: "Caveat Brush", cursive;
+  font-size: 25px;
+}

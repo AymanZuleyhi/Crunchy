@@ -1,0 +1,38 @@
+.SECURITY-QUESTION{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.security-question{
+  justify-content: space-between;
+  align-items: center;
+}
+
+.security-question_text.active{
+  color: black;
+  font-weight: bold;
+}
+
+.security-question_text.not-active{
+  color: grey;
+}
+
+.security-question_text.text{
+  text-decoration: line-through;
+}
+
+.security-question_controls{
+  display: flex;
+  align-items: center;
+}
+
+.security-questions_controls{
+  display: flex;
+  align-items: center;
+}
+
+.security-question_controls button{
+  
+}

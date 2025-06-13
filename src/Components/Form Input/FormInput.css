@@ -1,0 +1,67 @@
+.INPUT{
+  position: relative;
+}
+
+.INPUT input{
+  height: var(--input-height);
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  padding: var(--input-padding);
+  box-shadow: var(--input-border-inset);
+}
+
+.INPUT input:focus{
+  outline: none;
+}
+
+.toggle-type_container{
+  cursor: pointer;
+}
+
+.error_message{
+  color: red;
+  display: none;
+}
+
+.INPUT input:invalid[focused="true"] ~ .error_message{
+  display: block;
+}
+
+
+/* If the input is focused. */
+.INPUT input:focus {
+  border: 1px solid var(--main-color);
+  box-shadow: 0px 0px 5px rgb(242, 194, 26);
+}
+
+/* If the input is valid and focused. */
+.INPUT input:valid[focused="true"]:focus {
+  box-shadow: 0px 0px 5px rgb(242, 194, 26);
+}
+
+/* If the input is invalid. */
+.INPUT input:invalid[focused="true"] {
+  border: 1.5px solid red;
+}
+
+/* If the input is invalid and focused. */
+.INPUT input:invalid[focused="true"]:focus {
+  box-shadow: 0px 0px 5px rgb(255, 0, 0);
+}
+
+.toggle-type_container svg,
+.check-mark{
+  width: 14px;
+  color: var(--main-color);
+}
+
+.check-mark{
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 32px;
+}
+
+.INPUT input:valid + .check-mark{
+  display: flex;
+}

@@ -1,0 +1,75 @@
+.all-macronutrients{
+  display: grid;
+  gap: 10px;
+}
+
+/* Add macronutrient */
+.add-macronutrient{
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  gap: 10px;
+}
+
+.add-macronutrient_inputs{
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .add-macronutrient{
+    grid-template-columns: 1fr;
+  }
+  .add-macronutrient div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+.add-macronutrient button{
+  border-radius: 5px;
+}
+
+/* The box that holds the nutrition name and value. */
+.macro-box{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  align-items: center;
+  justify-content: space-between;
+
+  height: var(--button-height);
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  padding: 0px 0px 0px 10px;
+}
+.macro-box input{
+  border: none;
+  height: 100%;
+  border-left: var(--input-border);
+  border-radius: 0px 5px 5px 0px;
+  box-shadow: var(--input-border-inset);
+}
+
+/* The X button. */
+.macro-box div{
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  background-color: var(--main-color);
+  height: 20px;
+  width: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s ease;
+
+  cursor: pointer;
+}
+.macro-box div svg{
+  color: black;
+}
+.macro-box div:hover{
+  transform: scale(1.1);
+}

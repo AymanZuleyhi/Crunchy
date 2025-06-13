@@ -1,0 +1,23 @@
+.LOGIN_INPUT{
+  display: grid;
+  width: 100%;
+  gap: 5px;
+}
+
+.LOGIN_INPUT div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LOGIN_INPUT input{
+  height: var(--input-height);
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  padding: var(--input-padding);
+  box-shadow: var(--input-border-inset);
+}
+
+.LOGIN_INPUT input:focus{
+  outline: none;
+}

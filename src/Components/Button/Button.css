@@ -1,0 +1,59 @@
+.BUTTON{
+  font-size: var(--button-text);
+  height: var(--button-height);
+  padding: var(--button-padding);
+  border-radius: var(--button-radius);
+  font-weight: var(--bold);
+  background: linear-gradient(to top ,var(--button-secondary-color), var(--main-color));
+
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 10px;
+  transition: 0.4s ease;
+
+  cursor: pointer;
+}
+
+.BUTTON:hover{
+  background: linear-gradient(to top ,var(--button-secondary-color-hover), var(--main-color-hover)); 
+}
+
+.CLEAR-ALL{
+  background-color: white;
+  border: 1px solid rgba(185, 185, 185, 0.302);
+  color: var(--main-color);
+
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.CLEAR-ALL:hover{
+  border: 1px solid rgba(185, 185, 185, 0.474);
+}
+
+.BUTTON.invalid{
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.BUTTON.nothing-selected{
+  background: white;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.BUTTON.clear{
+  background: white;
+  color: var(--main-color);
+  border: 1px solid rgba(253, 195, 5, 0.659);
+}
+
+.BUTTON.clear:hover{
+    border: 1px solid var(--main-color);
+}

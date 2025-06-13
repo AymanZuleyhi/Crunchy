@@ -1,0 +1,14 @@
+.UPLOAD-IMAGES{
+  display: grid;
+  gap: 10px;
+}
+
+/* The container that holds all of the images that are being uploaded. */
+.uploading-images_container{
+  display: grid;
+  gap: 10px;
+}
+
+
+
+

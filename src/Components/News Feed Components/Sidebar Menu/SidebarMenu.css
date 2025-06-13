@@ -1,0 +1,19 @@
+@media (max-width: 1000px) {
+  .SIDEBAR-MENU{
+    display: none;
+  }
+}
+
+.sidebar-item{
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+
+.sidebar-item.active{
+  background-color: rgb(255, 248, 226);
+}

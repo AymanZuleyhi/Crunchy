@@ -1,0 +1,26 @@
+.OPTION_PICKER{
+  display: flex;
+}
+
+.OPTION_PICKER button{
+  width: 40px;
+}
+.OPTION_PICKER button{
+  border: none;
+  height: 30px;
+  border: 1px solid var(--main-color);
+  background-color: white;
+  cursor: pointer;
+}
+
+.OPTION_PICKER button:first-child{
+  border-radius: 14px 0px 0px 14px;
+}
+
+.OPTION_PICKER button:last-child{
+  border-radius: 0px 14px 14px 0px;
+}
+
+.OPTION_PICKER button.active{
+  background-color: var(--main-color);
+}

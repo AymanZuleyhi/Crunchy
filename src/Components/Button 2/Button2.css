@@ -1,0 +1,36 @@
+.BUTTON2{
+  border: none;
+  height: 35px !important;
+  width: 35px !important;
+  border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0);
+  transition: 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BUTTON2.not-valid{
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.BUTTON2 svg{
+  font-size: 17px;
+}
+
+.BUTTON2 button{
+  border: none;
+}
+
+.BUTTON2:hover{
+  background-color: rgba(255, 188, 33, 0.108);
+}
+
+.BUTTON2:hover .HOVER-BOX{
+  display: flex;
+}

@@ -1,0 +1,19 @@
+.SEARCH-BAR_FILTERS{
+  width: 100%;
+  display: grid;
+  gap: 10px;
+}
+
+.search-bar_filters{
+  max-height: 50px;
+  overflow: auto;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.remove-filters{
+  cursor: pointer;
+}

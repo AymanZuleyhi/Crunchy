@@ -1,0 +1,22 @@
+.CONTENT-SUBMITTER{
+  width: 400px;
+  background-color: white;
+  z-index: 200;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 20px;
+  border-radius: 10px;
+
+  display: grid;
+  gap: 15px;
+}
+
+.content-submitter_headline{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

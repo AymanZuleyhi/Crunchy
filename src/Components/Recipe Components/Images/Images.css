@@ -1,0 +1,32 @@
+.IMAGES{
+  display: grid;
+  grid-template-rows: 1fr 120px;
+  gap: 20px;
+}
+
+.IMAGES img{
+  border-radius: 10px;
+}
+
+.active-img{
+  height: 100%;
+  width: 100%;
+}
+
+.images{
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+}
+.images img{
+  width: calc(100% / 3.5);
+  cursor: pointer;
+}
+
+.images img.not-active{
+  opacity: 0.4;
+}
+
+.images img.active{
+  opacity: 1;
+}

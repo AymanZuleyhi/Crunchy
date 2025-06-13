@@ -1,0 +1,16 @@
+.SEARCH-BAR_FILTER{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 20px;
+  background-color: rgba(255, 195, 13, 0.445);
+  border-radius: 5px;
+  padding: 5px;
+  text-wrap: nowrap;
+}
+
+.SEARCH-BAR_FILTERS button{
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 195, 13, 0.445);
+}

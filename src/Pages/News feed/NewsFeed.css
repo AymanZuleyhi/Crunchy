@@ -1,0 +1,25 @@
+.NEWS-FEED{
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+@media (max-width: 1000px) {
+  .NEWS-FEED{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .NEWS-FEED .NAV_MENU{
+    display: none;
+  }
+}
+
+.news-feed_middle{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -1,0 +1,73 @@
+.RECIPE{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 80px;
+  width: 80%;
+  max-width: 1300px;
+}
+
+.recipe_headline{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recipe_controls{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: -30px;
+}
+
+/* Recipe hero section */
+.recipe-hero,
+.QUESTIONS,
+.REVIEWS,
+.ingredients-and-instructions{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .recipe-hero,
+  .QUESTIONS,
+  .REVIEWS,
+  .ingredients-and-instructions{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* /////////////////// */
+.INGREDIENTS,
+.COOKING_INSTRUCTIONS{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-information{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nutrition-information{
+  font-weight: bold;
+  cursor: pointer;
+}
+.nutrition-information:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+

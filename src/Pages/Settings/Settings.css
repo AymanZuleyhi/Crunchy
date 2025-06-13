@@ -1,0 +1,8 @@
+.SETTINGS{
+  display: grid;
+  justify-content: center;
+}
+
+.SETTINGS button{
+  justify-self: flex-start;
+}

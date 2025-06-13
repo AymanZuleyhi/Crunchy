@@ -1,0 +1,27 @@
+.USER_PROFILE{
+  position: relative;
+}
+
+.account-dropdown{
+  position: absolute;
+  right: 0;
+  top: 40px;
+  padding: var(--padding);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--box-radius);
+  background-color: var(--background-color2);
+}
+
+.account-dropdown div{
+  padding: var(--dropdown-button);
+  border-radius: var(--dropdown-radius);
+}
+
+.account-dropdown div:hover{
+  background: var(--hover-color);
+}
+
+.account-dropdown p{
+  font-weight: var(--normal);
+  color: var(--text-color2);
+}

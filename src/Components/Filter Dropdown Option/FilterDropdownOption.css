@@ -1,0 +1,19 @@
+.FILTER-DROPDOWN-OPTION{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.FILTER-DROPDOWN-OPTION:hover{
+  background-color: var(--hover-color);
+}
+
+.FILTER-DROPDOWN-OPTION p{
+  font-weight: var(--normal);
+  color: var(--text-color2);
+}

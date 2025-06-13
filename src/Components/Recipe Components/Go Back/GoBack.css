@@ -1,0 +1,19 @@
+.GO-BACK{
+  height: var(--button-height);
+  padding: 0px 10px 0px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.GO-BACK:hover{
+  background-color: var(--dropdown-option-hover);
+}
+
+.GO-BACK:hover .HOVER-BOX{
+  display: flex;
+}

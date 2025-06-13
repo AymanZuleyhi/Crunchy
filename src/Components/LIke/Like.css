@@ -1,0 +1,19 @@
+.LIKE{
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.197);
+  height: 25px;
+  padding: 0px 10px 0px 10px;
+  border-radius: 30px;
+  gap: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.LIKE.liked,
+.LIKE:hover{
+  background-color: rgba(255, 187, 41, 0.328);
+  box-shadow: 0px 0px 5px rgb(255, 187, 41);
+}

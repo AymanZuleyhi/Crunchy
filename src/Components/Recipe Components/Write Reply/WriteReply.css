@@ -1,0 +1,21 @@
+.WRITE-REPLY{
+  display: grid;
+  gap: 10px;
+}
+
+.write-reply_profile-pic-input{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.write-reply_controls{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px
+}
+.write-reply_controls p{
+  cursor: pointer;
+}

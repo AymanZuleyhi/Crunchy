@@ -1,0 +1,55 @@
+.RECIPE_BOX{
+  display: grid;
+  grid-template-rows: 1fr 70px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.255);
+  cursor: pointer;
+  max-height: 400px;
+}
+
+.recipe-box_headline{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.recipe-box_headline p{
+  font-size: 18px;
+  color: black;
+  font-weight: bold; 
+  white-space: nowrap;
+}
+
+.remove-from-favorites{
+  border: 1px solid black;
+  display: flex;
+  position: relative;
+}
+.remove-from-favorites:hover .HOVER-BOX{
+  display: flex;
+}
+
+.RECIPE_BOX:hover{
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.371);
+}
+
+.RECIPE_BOX img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.recipe-box_content{
+  display: grid;
+  padding: 10px;
+}
+
+.recipe-box_content div{
+  align-items: center;
+  gap: 5px;
+  color: grey;
+}
+
+.recipe-type_container{
+  display: flex;
+}

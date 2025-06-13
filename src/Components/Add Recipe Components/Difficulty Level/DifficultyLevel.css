@@ -1,0 +1,52 @@
+.DIFFICULTY_LEVEL{
+  display: grid;
+  gap: 10px;
+}
+
+.difficulty-level_options{
+  display: flex;
+  border-radius: 30px;
+  border: 1px solid rgb(241, 241, 241);
+  overflow: hidden;
+  justify-self: flex-start;
+}
+
+.difficulty-level_options div{
+  height: var(--button-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--button-padding);
+  cursor: pointer;
+  font-weight: var(--bold);
+}
+
+@media (max-width: 600px) {
+  .difficulty-level_options div{
+    padding: 10px;
+  }
+}
+
+/* Background color of the active and not-active button. */
+.difficulty-button.active{
+  background: linear-gradient(to top ,var(--button-secondary-color), var(--main-color));
+}
+
+.difficulty-button.not-active{
+  background-color: white;
+}
+
+.difficulty-level_options{
+  border: 1.5px solid rgb(254, 191, 45);
+}
+
+.difficulty-level_options:hover{
+  box-shadow: 0px 0px 5px rgb(254, 191, 45);
+  /* border: 1px solid rgb(254, 191, 45); */
+}
+
+/* Middle option */
+.difficulty-level_options div:nth-child(2) {
+  border-left: 1px solid var(--main-color);
+  border-right: 1px solid var(--main-color);
+}

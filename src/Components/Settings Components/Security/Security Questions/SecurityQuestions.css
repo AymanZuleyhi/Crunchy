@@ -1,0 +1,20 @@
+.pre-written-questions{
+  display: grid;
+  gap: 10px;
+}
+
+.pre-made-questions_container{
+  display: grid;
+  gap: 5px;
+}
+
+.select-security-question{
+  display: grid;
+  gap: 10px;
+}
+
+.selected-questions_container{
+  display: grid;
+  padding: 10px;
+  gap: 10px;
+}

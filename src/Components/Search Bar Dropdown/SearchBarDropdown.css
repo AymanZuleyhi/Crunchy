@@ -1,0 +1,40 @@
+.search-bar_dropdown_container{
+  max-height: 300px;
+  background-color: white; 
+  width: 90%;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 0px 10px 10px 10px;
+}
+
+.filtered-ingredients_dropdown{
+  border-top: 1px solid rgba(228, 228, 228, 0.499);
+  width: 95%;
+  background-color: white;
+  overflow: auto;
+}
+
+.filtered-ingredients_dropdown img{
+  width: 30px;
+}
+
+.filtered-ingredients_dropdown div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+}
+
+.filtered-ingredients_dropdown div:hover{
+  background-color: var(--dropdown-option-hover);
+}

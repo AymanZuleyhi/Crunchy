@@ -1,0 +1,22 @@
+.INGREDIENTS{
+  width: 100%;
+}
+
+.serving-size{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ingredients_headline{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
+}
+
+.ingredients_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}

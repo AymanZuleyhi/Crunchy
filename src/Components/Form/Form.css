@@ -1,0 +1,53 @@
+.SIGN-UP{
+  display: grid;
+  width: 300px;
+  gap: 20px;
+  margin: auto;
+}
+
+.SIGN-UP form{
+  width: 300px;
+  display: grid;
+  gap: 10px;
+}
+
+.INPUT{
+  display: grid;
+  gap: 5px;
+}
+
+.SIGN-UP button{
+  border-radius: 5px;
+}
+
+.input-headline,
+.input-headline div{
+  display: flex;
+  align-items: center;
+}
+
+.input-headline{
+  justify-content: space-between;
+}
+.input-headline div{
+  gap: 5px;
+}
+.input-headline p{
+  color: var(--text-color2);
+}
+
+.have-account{
+  justify-content: center;
+}
+
+.have-account span{
+  text-decoration: underline;
+  font-weight: var(--bold);
+  cursor: pointer;
+}
+
+
+.SIGN-UP h1,
+.have-account{
+  text-align: center;
+}

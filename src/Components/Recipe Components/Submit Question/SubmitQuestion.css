@@ -1,0 +1,38 @@
+.SUBMIT_QUESTION{
+  box-shadow: 0px 0px 5px rgba(183, 183, 183, 0.5);
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  padding: 0px 10px 0px 10px;
+  border-radius: 10px;
+}
+
+.SUBMIT_QUESTION img{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.question_field{
+  padding: var(--input-padding);
+  box-shadow: var(--input-border-inset);
+  border: var(--input-border);
+  height: var(--input-height);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 30px;
+  width: 100%;
+  transition: 0.4s ease;
+}
+
+.question_field:hover{
+  box-shadow: inset 5px 5px 5px rgba(190, 190, 190, 0.224);
+}
+
+.question_field p {
+  color: grey;
+}

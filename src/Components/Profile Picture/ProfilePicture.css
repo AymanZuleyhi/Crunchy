@@ -1,0 +1,29 @@
+.PROFILE-PICTURE{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 36px;
+  width: 36px;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: var(--main-color);
+  overflow: hidden;
+}
+
+.PROFILE-PICTURE.active{
+  box-shadow: 0px 0px 10px rgb(253, 197, 5);
+}
+
+.PROFILE-PICTURE img{
+  height: 36px;
+  width: 36px;
+  object-fit: cover;
+}
+
+.PROFILE-PICTURE p{
+  font-size: 20px;
+}

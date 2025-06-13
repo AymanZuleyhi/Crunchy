@@ -1,0 +1,8 @@
+.CLICKABLE-TEXT{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.CLICKABLE-TEXT:hover{
+  text-decoration: underline;
+}

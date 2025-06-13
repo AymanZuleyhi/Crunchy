@@ -1,0 +1,54 @@
+.DROPDOWN2{
+  position: relative;
+}
+
+/* Selector */
+.dropdown2{
+  height: var(--button-height);
+  min-width: 120px;
+  border: var(--input-border);
+  padding: var(--input-padding);
+  border-radius: var(--input-border-radius);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  cursor: pointer;
+  box-shadow: inset -5px -5px 10px rgba(216, 216, 216, 0.352);
+}
+
+.dropdown2:hover,
+.dropdown2.active{
+  border: var(--input-hover-border);
+  box-shadow: var(--input-hover-shadow);
+}
+
+/* Dropdown options */
+.dropdown2-options{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: white;
+  padding: 7px;
+  box-shadow: 0px 0px 5px rgba(127, 127, 127, 0.5);
+  border-radius: 5px;
+
+  z-index: 100;
+}
+
+.dropdown2-options div{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: var(--dropdown-option-height);
+  position: relative;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.dropdown2-options div:hover{
+  background-color: var(--hover-color);
+  border-radius: var(--dropdown-radius);
+}

@@ -1,0 +1,22 @@
+.ADD_RECIPE h1{
+  text-align: center;
+}
+.add-recipe_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 600px;
+  gap: 20px;
+}
+.add-recipe_form span{
+  color: red;
+}
+
+.add-recipe_form button{
+  width: 100%;
+}
+
+.recipe-name{
+  border: 1px solid red;
+}

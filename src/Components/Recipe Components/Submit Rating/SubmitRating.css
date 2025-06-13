@@ -1,0 +1,15 @@
+.SUBMIT-RATING{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.SUBMIT-RATING svg{
+  color: rgb(241, 241, 241);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.SUBMIT-RATING svg.active{
+  color: rgb(247, 199, 0);
+}

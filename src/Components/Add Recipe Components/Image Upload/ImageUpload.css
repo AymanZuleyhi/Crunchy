@@ -1,0 +1,41 @@
+.EACH-UPLOADED-IMAGE{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.EACH-UPLOADED-IMAGE img{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.content{
+  display: grid;
+  width: 80%;
+  gap: 3px;
+}
+
+.content p:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.content p:nth-of-type(2) {
+  font-size: 12px;
+  color: grey;
+}
+
+/* Progress bar */
+.progress-bar_container{
+  height: 7px;
+  width: 100%;
+  background-color: rgb(216, 216, 216);
+  border-radius: 10px;
+}
+
+.progress-bar_container div{
+  height: 7px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+}

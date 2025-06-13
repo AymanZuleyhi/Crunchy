@@ -1,0 +1,172 @@
+/* Font families */
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --main-color: rgb(255, 191, 41);
+  --hover-color: rgba(255, 209, 73, 0.083);
+  --main-color-hover: rgb(235, 172, 25);
+  --button-secondary-color: rgb(232, 169, 22);
+  --background-color: rgb(244, 241, 221);
+  
+  --placeholder: rgb(198, 198, 198);
+  --grey-text: rgb(173, 173, 173);
+
+  --text-color2: rgb(89, 89, 89);
+  --dropdown-active-color: rgb(255, 242, 198);
+  --background-color2: white;
+
+  /* Font weight */
+  --light: 300;
+  --normal: 400;
+  --bold: 500;
+
+  /* Hover */
+  --hover-color: rgb(255, 248, 229);
+
+  /* Padding */
+  --padding: 10px;
+  --button-padding: 0px 18px 0px 18px;
+  --dropdown-button: 4px 6px 4px 6px;
+
+  /* Shadow */
+  --dropdown-active-shadow: 0px 0px 7px rgba(252, 195, 6, 0.652);
+
+  /* Border radius */
+  --dropdown-radius: 5px;
+  --border-radius-input: 5px;
+
+  /* Border color */
+  
+
+  /* Button */
+  --button-height: 36px;
+  
+  --button-radius: 40px;
+  --button-text-weight: 600;
+  --button-shadow: 2px 2px 5px rgba(170, 170, 170, 0.2);
+
+  /* Button hover */
+  --main-color-hover: rgb(255, 191, 41);
+  --button-secondary-color-hover: rgb(220, 160, 19);
+
+  /* Text */
+  --text: 13px;
+  --button-text: 14px;
+
+  /* Box */
+  
+  --box-radius: 15px;
+  --box-shadow: 0px 0px 5px rgba(186, 186, 186, 0.5);
+  --box-shadow-hover: 0px 0px 5px rgba(174, 174, 174, 0.596);
+  
+  /* Dropdown option */
+  --dropdown-option-height: 35px;
+
+  /* Dropdown hover color */
+  --dropdown-option-hover: rgba(252, 193, 43, 0.154);
+
+  /* Input and textarea */
+  --input-height: 36px;
+  --input-border: 1px solid rgb(234, 234, 234);
+  --input-border-radius: 5px;
+  --input-padding: 0px 10px 0px 10px;
+  --input-border-inset: inset 3px 3px 5px rgba(196, 196, 196, 0.087);
+
+  --input-hover-border: 1px solid rgb(254, 191, 45);
+  --input-hover-shadow: 0px 0px 5px rgb(254, 191, 45);
+
+  /* Input 2 */
+}
+
+
+
+h1{
+  font-size: 25px;
+}
+h2{
+  font-size: 20px;
+}
+body{
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p, input, img, button{
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+img{
+  object-fit: cover;
+}
+p{
+  user-select: none;
+  font-size: var(--text);
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.small-text{
+  color: var(--grey-text);
+}
+
+input:focus{
+  outline: none;
+}
+
+/* Pages */
+.HOME,
+.ADD_RECIPE,
+.SETTINGS,
+.NEWS_FEED,
+.ACCOUNT,
+.NEWS-FEED{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 80px;
+  width: 80%;
+  max-width: 1300px;
+}
+
+@media (max-width: 600px) {
+  /* Pages */
+  .HOME,
+  .ADD_RECIPE,
+  .SETTINGS,
+  .NEWS_FEED,
+  .ACCOUNT,
+  .nav-bar_container,
+  .NEWS-FEED{
+    width: 90%;
+  }
+}
+
+.ADD_RECIPE h1,
+.SETTINGS h1,
+.NEWS_FEED h1{
+  text-align: center;
+}
+
+.container{
+  border: 1px solid rgb(231, 231, 231);
+  width: 100%;
+  display: grid;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(154, 154, 154, 0.11);
+}
+
+svg{
+  color: var(--main-color)
+}

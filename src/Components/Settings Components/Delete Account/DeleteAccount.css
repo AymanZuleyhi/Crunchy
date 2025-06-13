@@ -1,0 +1,25 @@
+.DELETE-ACCOUNT{
+  position: fixed;
+  min-width: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 103;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  gap: 15px;
+}
+
+.checked{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.delete-account_headline{
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,18 @@
+.CHANGE-EMAIL{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.CHANGE-EMAIL{
+  width: 100%;
+}
+
+.CHANGE-EMAIL p{
+  cursor: pointer;
+}
+
+.CHANGE-EMAIL p:hover{
+  text-decoration: underline;
+}

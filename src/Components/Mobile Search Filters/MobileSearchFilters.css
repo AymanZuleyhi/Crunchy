@@ -1,0 +1,58 @@
+.MOBILE-FILTERS{
+  background-color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+
+  min-width: 80%;
+  max-width: 300px;
+  max-height: 70%;
+
+  position: fixed;
+  top: 50;
+  left: 50;
+
+  padding: 20px;
+  border-radius: 10px;
+
+  z-index: 200;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.MOBILE-FILTERS h2{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: middle;
+}
+
+/* Headline */
+.mobile-filters_headline{
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mobile-filters_headline h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mobile-filters_body{
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+/* Buttons */
+.mobile-filters_controls{
+  display: flex;
+  gap: 10px;
+}
+
+.mobile-filters_controls button{
+  border-radius: 5px;
+  width: 100%;
+}

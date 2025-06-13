@@ -1,0 +1,23 @@
+.COOKING_STEP{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  gap: 5px;
+  height: var(--dropdown-option-height);
+  position: relative;
+  padding: 7px;
+}
+
+.COOKING_STEP input{
+  height: 25px;
+}
+
+.COOKING_STEP div svg{
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.cooking-step_controls{
+  display: flex;
+}

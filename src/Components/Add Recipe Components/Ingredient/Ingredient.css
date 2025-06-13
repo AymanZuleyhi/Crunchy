@@ -1,0 +1,46 @@
+.ADD_RECIPE_INGREDIENT{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  height: var(--dropdown-option-height);
+  padding: 7px;
+}
+
+.ingredient_information{
+  display: flex;
+  gap: 10px;
+}
+
+.ADD_RECIPE_INGREDIENT div{
+  align-items: center;
+}
+
+.ADD_RECIPE_INGREDIENT input{
+  width: 100%;
+  height: 30px;
+}
+
+.ADD_RECIPE_INGREDIENT svg{
+  right: 0px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.ADD_RECIPE_INGREDIENT img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.edit-ingredient{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ingredient_controls{
+  display: flex;
+  align-items: center;
+}

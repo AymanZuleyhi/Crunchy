@@ -1,0 +1,39 @@
+.NUTRITION_INFORMATION{
+  position: fixed;
+  background-color: white;
+  width: 250px;
+  z-index: 5;
+  box-shadow: 0px 0px 5px rgba(154, 154, 154, 0.11);
+  padding: 15px;
+  display: grid;
+  gap: 12px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 110;
+}
+
+.NUTRITION_INFORMATION svg{
+  cursor: pointer;
+}
+
+.nutrition-information_headline{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.all-nutrients div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nutrient{
+  height: 30px;
+  padding: 0px 10px 0px 10px;
+}
+.nutrient.odd{
+  background-color: rgba(242, 242, 242, 0.366);
+}

@@ -1,0 +1,20 @@
+.COMMENT{
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.197);
+  height: 25px;
+  padding: 0px 10px 0px 10px;
+  border-radius: 30px;
+  gap: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.COMMENT.active,
+.COMMENT:hover{
+  display: flex;
+  background-color: var(--dropdown-active-color);
+  box-shadow: 0px 0px 5px rgba(255, 191, 29, 0.635);
+}

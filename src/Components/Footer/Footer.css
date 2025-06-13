@@ -1,0 +1,17 @@
+.FOOTER{
+  margin-top: auto;
+  text-align: center;
+  justify-self: flex-end;
+  height: 30px;
+  width: 80%;
+  max-width: 1300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgb(211, 211, 211);
+}
+
+.FOOTER p{
+  font-weight: bold;
+}
