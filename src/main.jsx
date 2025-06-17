@@ -8,11 +8,13 @@ import RecipeContextFunction from "../src/Context/RecipeContext.jsx";
 import AppContextProvider from './Context/AppContext.jsx';
 import HelpersProvider from "./Context/Helpers.jsx";
 import AppDataContextProvider from './Context/AppDataContext.jsx';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import SecurityFlowContextProvider from './Context/SecurityFlowContext.jsx';
 
+const basePath = import.meta.env.VITE_BASE_PATH || "/";
+
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <HashRouter>
     <SecurityFlowContextProvider>
       <AppDataContextProvider>
         <AppContextProvider>
@@ -26,5 +28,5 @@ createRoot(document.getElementById('root')).render(
         </AppContextProvider>
       </AppDataContextProvider>
     </SecurityFlowContextProvider>
-  </BrowserRouter>
+  </HashRouter>
 )
