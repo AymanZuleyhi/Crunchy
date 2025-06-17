@@ -45,6 +45,7 @@ function UserProfile() {
   };
 
   const handleClick = (item) => {
+    console.log(userData);
     if(userData) {
       if(item.name === "Logout") {
         logoutUser();
@@ -52,7 +53,6 @@ function UserProfile() {
       } else {
         // If it's not the logout button.
         if(userData?.isVerified) {
-          console.log(userData);
           navigate(item.name === "Account" ? `${item.url}/${userData._id}` : item.url );
           handleIsActive(false);
           window.scrollTo(0, 0);
