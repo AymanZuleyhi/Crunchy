@@ -35,6 +35,7 @@ function AppContextProvider({ children }) {
         withCredentials: true
       });
 
+      console.log(data.user);
       setUserData(data.user);
     } catch (error) {
       setLogedIn(false);
