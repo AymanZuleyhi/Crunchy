@@ -1,6 +1,6 @@
 .DROPDOWN{
   position: relative;
-  z-index: 100;
+  z-index: 98;
 }
 .dropdown-selector{
   display: flex;

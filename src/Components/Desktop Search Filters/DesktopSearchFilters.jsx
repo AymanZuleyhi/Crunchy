@@ -19,9 +19,29 @@ function DesktopSearchFilters(props) {
       <div className="filter-section">
         {screenWidth > 700 &&
           <div className="dropdowns">
-            <Dropdown name={"dieteryPreferences"} text={"Dietery Preference"} options={dieteryPreferences} selectedOptions={selectedOptions} setSelectedOptions={setSelectedOptions} />
-            <Dropdown name={"mealType"} text={"Meal Type"} options={mealType} selectedOptions={selectedOptions} setSelectedOptions={setSelectedOptions}/>
-            <Dropdown name={"allergens"} text={"Allergens"} options={allergens} selectedOptions={selectedOptions} setSelectedOptions={setSelectedOptions} />
+            <Dropdown 
+              name={"dieteryPreferences"} 
+              text={"Dietery Preference"} 
+              options={dieteryPreferences} 
+              selectedOptions={selectedOptions} 
+              setSelectedOptions={setSelectedOptions} 
+            />
+
+            <Dropdown 
+              name={"mealType"} 
+              text={"Meal Type"} 
+              options={mealType} 
+              selectedOptions={selectedOptions} 
+              setSelectedOptions={setSelectedOptions}
+            />
+
+            <Dropdown 
+              name={"allergens"} 
+              text={"Allergens"} 
+              options={allergens} 
+              selectedOptions={selectedOptions} 
+              setSelectedOptions={setSelectedOptions} 
+            />
           </div>
         }
         

@@ -13,7 +13,6 @@ function HelpersProviders({ children }) {
     }
     
     if(!ref.current.contains(e.target)) {
-      console.log("hi");
       setIsActive(false);
     }
   };

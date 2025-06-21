@@ -1,7 +1,7 @@
-import OptionPicker from "../../Option Picker/OptionPicker";
-import Ingredient from "../Ingredient/Ingredient";
 import "./Ingredients.css";
 import { useState } from "react";
+import OptionPicker from "../../Option Picker/OptionPicker";
+import Ingredient from "../Ingredient/Ingredient";
 
 function Ingredients(props) {
   const { ingredients } = props;
@@ -28,7 +28,7 @@ function Ingredients(props) {
         {
           ingredients.map((ingredient, i) => {
             return (
-              <Ingredient ingredient={ingredient} key={ingredient._id}/>
+              <Ingredient options={options} ingredient={ingredient} key={ingredient._id}/>
             )
           })
         }

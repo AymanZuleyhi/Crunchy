@@ -17,9 +17,20 @@ function PortionSize() {
     <div className="container">
       <h2>Portion Size <span>*</span></h2>
       <p>How many people can your recipe feed?</p>
+
       <div className="portion-size_container">
-        <Input onChange={handleInput} name={"quantity"} placeholder={"Quantity"} />
-        <Input onChange={handleInput} name={"value"} type={"number"} placeholder={"1"} />
+        <Input 
+          onChange={handleInput} 
+          name={"quantity"} 
+          placeholder={"Quantity"} 
+        />
+
+        <Input 
+          onChange={handleInput} 
+          name={"value"} 
+          type={"number"} 
+          placeholder={"1"} 
+        />
       </div>
     </div>
   )

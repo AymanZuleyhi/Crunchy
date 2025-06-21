@@ -15,7 +15,13 @@ function SearchBar(props) {
     handleShowMobileFilters
   } = props;
 
-  const { originalIngredients, ingredients, setIngredients, filteredIngredients, setFilteredIngredients } = useContext(IngredientsContext);
+  const { 
+    originalIngredients, 
+    ingredients, 
+    setIngredients, 
+    filteredIngredients, 
+    setFilteredIngredients 
+  } = useContext(IngredientsContext);
 
   const [userInput, setUserInput] = useState();
   const [isActive, setIsActive] = useState(false);
@@ -75,6 +81,10 @@ function SearchBar(props) {
     setFilteredIngredients(ingredients);
     setFilters([]);
   };
+  
+  useEffect(() => {
+    setIngredients(originalIngredients);
+  }, [])
   
   return (
     <div className={`SEARCH-BAR ${screenWidth > 700 ? "mobile" : "desktop"}`}>

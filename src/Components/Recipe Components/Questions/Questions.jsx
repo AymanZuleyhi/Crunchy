@@ -44,7 +44,7 @@ function Questions(props) {
             }
           </div>
 
-          <p style={{ color: "grey" }}>{`Currently showing ${questionsToShow} ${type === "question" ? "questions" : "reviews"}.`}</p>
+          <p style={{ color: "grey" }}>{`Currently showing up to ${questionsToShow} ${type === "question" ? "questions" : "reviews"}.`}</p>
   
           <div className={`questions_controls ${questionsToShow >= data.length ? "maximum" : "not-maximum"}`}>
             {questionsToShow < data.length &&

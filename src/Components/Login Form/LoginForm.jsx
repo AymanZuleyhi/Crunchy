@@ -63,6 +63,7 @@ function LoginForm() {
       withCredentials: true
     });
 
+    console.log(data);
     if(!data.success) {
       setValues({
         email: values.email,
@@ -83,7 +84,7 @@ function LoginForm() {
     if(!data.twoFactorAuthentication) {
       getUserData();
       navigate("/");
-      setLogedIn(true);
+      // setLogedIn(true);
       toast(data.message);
     };
   };

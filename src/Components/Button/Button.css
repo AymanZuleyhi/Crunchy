@@ -57,3 +57,7 @@
 .BUTTON.clear:hover{
     border: 1px solid var(--main-color);
 }
+
+.BUTTON.Unfollow{
+  background: rgb(237, 237, 237);
+}

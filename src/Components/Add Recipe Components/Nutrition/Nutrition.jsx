@@ -75,10 +75,27 @@ function Nutrition() {
       
       <div className="add-macronutrient">
         <div className="add-macronutrient_inputs">
-          <Input type={"text"} name={"name"} onChange={handleInput} placeholder={"Calories"} value={macronutrient.name} />
-          <Input type={"number"} name={"value"} onChange={handleInput} placeholder={"890"} value={macronutrient.value} />
+          <Input 
+            type={"text"} 
+            name={"name"} 
+            onChange={handleInput} 
+            placeholder={"Calories"} 
+            value={macronutrient.name} 
+          />
+
+          <Input 
+            type={"number"} 
+            name={"value"} 
+            onChange={handleInput} 
+            value={macronutrient.value} 
+          />
         </div>
-        <Button onClick={addMacronutrient} text={"Add"}/>
+
+        <Button 
+          type={ macronutrient.name.trim().length === 0 || (macronutrient.value === 0 || macronutrient.value.trim().length === 0) ? "invalid" : "valid" }
+          onClick={addMacronutrient} 
+          text={"Add"}
+        />
       </div>
 
       <p>Add a value to each macronutrient.</p>

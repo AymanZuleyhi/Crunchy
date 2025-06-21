@@ -16,10 +16,16 @@ function AppContextProvider({ children }) {
         withCredentials: true
       });
 
+      if(!data.success) {
+        return;
+      };
+
       if(data.success) {
+        // console.log("The user is succesfully authenticated", data);
         setLogedIn(true);
         getUserData();
       } else {
+        // console.log("The user is not authenticated", data);
         setLogedIn(false);
       }
     } catch(error) {
@@ -34,9 +40,14 @@ function AppContextProvider({ children }) {
       const { data } = await axios.get(url, {
         withCredentials: true
       });
-
-      console.log(data.user);
-      setUserData(data.user);
+      
+      if(data.user) {
+        // console.log("The user info we get from the back-end", data);
+        setUserData(data.user);
+        setLogedIn(true);
+      } else {
+        // console.log("We could not get the user data from the back-end.", data.message);
+      }
     } catch (error) {
       setLogedIn(false);
       toast.error(data.message);

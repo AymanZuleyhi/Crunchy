@@ -126,7 +126,7 @@ function SecurityQuestions() {
               />
               
               <Button 
-                isValid={ userInput.trim().length !== 0 }
+                type={userInput.trim().length === 0 ? "invalid" : "valid"}
                 text={"Select"}
               />
             </form>

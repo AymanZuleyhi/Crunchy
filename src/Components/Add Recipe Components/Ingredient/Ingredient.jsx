@@ -60,8 +60,16 @@ function Ingredient(props) {
 
       {edit &&
         <div className="edit-ingredient">
-          <OptionPicker setUnit={setUnit} options={[{name: "oz", active: true}, {name: "g", active: false}]} />
-          <Input placeholder={"Add weight"} type={"number"} onChange={handleInput}/>
+          <OptionPicker 
+            setUnit={setUnit} 
+            options={[{name: "oz", active: true}, {name: "g", active: false}]} 
+          />
+          
+          <Input 
+            placeholder={"Add weight"} 
+            type={"number"} 
+            onChange={handleInput}
+          />
         </div>
       }
 
@@ -71,6 +79,7 @@ function Ingredient(props) {
           icon={edit ? faCheckCircle : faWeightScale}
           text={edit ? "Done" : "Edit"}
           isValid={(edit && userInput.trim().length !== 0) || !edit}
+          type={"button"}
         />
 
         <Button2 
@@ -80,6 +89,7 @@ function Ingredient(props) {
           } 
           icon={faClose} 
           text={edit ? "Cancel" : "Remove"}
+          type={"button"}
         />
       </div>
     </div>

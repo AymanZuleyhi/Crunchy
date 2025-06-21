@@ -32,7 +32,7 @@ function RecipeBox(props) {
 
       <div className="recipe-box_content">
         <div className="recipe-box_headline">
-          <p>{recipeName}</p>
+          <p className="recipe-box_recipe-name">{recipeName}</p>
 
           {location === "account" &&
             <Button2 

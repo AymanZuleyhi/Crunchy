@@ -15,7 +15,8 @@ function Recipes(props) {
     user, 
     recipes,
     setRecipes,
-    sortRecipes
+    sortRecipes,
+    originalRecipes, setOriginalRecipes
   } = props;
 
   const { backendUrl, userData, handleCheckAuth } = useContext(AppContext);
@@ -43,6 +44,7 @@ function Recipes(props) {
 
       if(data.success) {
         setRecipes(data.recipes);
+        setOriginalRecipes(data.recipes);
         setAllRecipesLength(data.allRecipesLength);
       };
     } catch(error) {
@@ -72,9 +74,25 @@ function Recipes(props) {
 
   useEffect(() => {
     if(location === "/") {
-      getAllRecipes(); 
+      getAllRecipes();
     };
-  }, [limit, filters])
+  }, [])
+
+  // Filter the recipes based on the selected ingredient.
+  useEffect(() => {
+    if(location === "/") {
+      if(filters.length === 0) {
+        setRecipes(originalRecipes);
+        return;
+      };
+
+      setRecipes((prevRecipes) => {
+        return prevRecipes.filter((recipe) => {
+          return recipe.ingredients.some((ingredient) => ingredient.name.includes(filters))
+        });
+      })
+    };
+  }, [filters])
 
   useEffect(() => {
     if(location !== "/" && (type === "uploads" || type === "favourites")) {
@@ -114,17 +132,17 @@ function Recipes(props) {
         }
       </div>
 
-      {recipes?.length !== 0 && (recipes.length < allRecipesLength) &&
+      {/* {recipes?.length !== 0 && (recipes.length < allRecipesLength) &&
         <Button 
           isValid={recipes.length < allRecipesLength } 
           onClick={() => handleShowMoreRecipes()} 
           text={"Show More"}
         />
-      }
-
+      } */}
+{/* 
       {recipes.length === allRecipesLength &&
         <p style={{ textAlign: "center" }}>There are no more recipes to show.</p>
-      }
+      } */}
     </div> 
   )
 };

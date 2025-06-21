@@ -10,7 +10,7 @@ function PersonalInformation(props) {
   const [countries, setCountries] = useState([]);
 
   const getAllCountries = async () => {
-    const url = "https://restcountries.com/v3.1/all";
+    const url = "https://restcountries.com/v3.1/all?fields=name,cca2,flags,idd";
 
     try {
       const { data } = await axios.get(url);
@@ -55,7 +55,7 @@ function PersonalInformation(props) {
 
       <Button 
         onClick={() => updateInformation()} 
-        isValid={isValid} 
+        type={isValid ? "valid" : "invalid"} 
         text={"Save"}
       />
     </>

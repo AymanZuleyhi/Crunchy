@@ -3,10 +3,10 @@ import HoverBox from "../Hover Box/HoverBox.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Button2(props) {
-  const { icon, text, onClick, type, isValid } = props;
+  const { icon, text, onClick, isValid } = props;
   
   return (
-    <button onClick={onClick} type={type} className={`BUTTON2 ${isValid || isValid === undefined ? "valid" : "not-valid"}`}>
+    <button onClick={onClick} type={"button"} className={`BUTTON2 ${isValid || isValid === undefined ? "valid" : "not-valid"}`}>
       <FontAwesomeIcon icon={icon}/>
       <HoverBox text={text}/>
     </button>

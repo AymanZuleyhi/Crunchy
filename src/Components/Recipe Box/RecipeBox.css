@@ -14,7 +14,7 @@
   justify-content: space-between;
 }
 
-.recipe-box_headline p{
+.recipe-box_recipe-name{
   font-size: 18px;
   color: black;
   font-weight: bold; 

@@ -12,10 +12,13 @@ import IconButton from "../../Icon Button/IconButton";
 
 function DeleteAccount(props) {
   const { handleShowDeleteAccount } = props;
+
   const navigate = useNavigate();
 
   const { backendUrl, handleCheckAuth } = useContext(AppContext);
+
   const [checked, setChecked] = useState(false);
+
   const handleChecked = () => {
     setChecked(!checked);
   };
@@ -75,7 +78,7 @@ function DeleteAccount(props) {
       
       <Button 
         onClick={() => handleDeleteAccount()}
-        isValid={checked ? true : false} 
+        type={checked ? "valid" : "invalid"} 
         text={"Delete"}
         err={true}
       />

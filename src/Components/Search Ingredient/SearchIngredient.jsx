@@ -8,7 +8,13 @@ import Input from "../Input/Input";
 function SearchIngredient() {
   const { setRecipe } = useContext(RecipeContext);
   const { handleClickOutside } = useContext(Helpers);
-  const { ingredients, setIngredients, filteredIngredients, setFilteredIngredients } = useContext(IngredientsContext);
+  const { 
+    originalIngredients,
+    ingredients, 
+    setIngredients, 
+    filteredIngredients, 
+    setFilteredIngredients 
+  } = useContext(IngredientsContext);
 
   const dropdownRef = useRef(null);
 
@@ -26,7 +32,7 @@ function SearchIngredient() {
     // Update the state if 500s have passed since the user stopped typing.
     debounceTimeout = setTimeout(() => {
       setFilteredIngredients(() => {
-        return ingredients?.filter((ingredient) => ingredient.toLowerCase().includes(e.target.value) )
+        return ingredients?.filter((ingredient) => ingredient.toLowerCase().includes(e.target.value.toLowerCase()) )
       });
     }, 500);
   };
@@ -61,6 +67,10 @@ function SearchIngredient() {
     return () => {
       removeEventListener("click", clickHandler);
     };
+  }, [])
+
+  useEffect(() => {
+    setIngredients(originalIngredients);
   }, [])
 
   return (

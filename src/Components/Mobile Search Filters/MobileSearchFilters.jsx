@@ -33,14 +33,8 @@ function MobileSearchFilters(props) {
   };
 
   const resetFilters = () => {
-    setSelectedOptions({
-      mealType: [],
-      dieteryPreferences: [],
-      allergens: [],
-      sortBy: { name: "Rating", ascending: true }
-    });
 
-    handleShowMobileFilters();
+    sortRecipes("clear");
   };
 
   useEffect(() => {
@@ -90,7 +84,6 @@ function MobileSearchFilters(props) {
         <Button 
           text={"Search"} 
           onClick={() => {sortRecipes(), handleShowMobileFilters()}}
-          type={hasActiveFilters === "nothing-selected"? "invalid" : "valid"}
         />
       </div>
     </div>

@@ -1,14 +1,31 @@
 import "./Ingredient.css";
 
 function Ingredient(props) {
-  const { ingredient } = props;
+  const { ingredient, options } = props;
+  
+  const handleIngredientWeight = () => {
+    const servingSize = Number(options.find((option) => option.active).name);
+
+    if(servingSize === 2) {
+      return ingredient.weight;
+    } else {
+      return ingredient.weight * servingSize;
+    };
+  };
 
   return(
     <div className="INGREDIENT">
-      <div>
+      <div className="ingredient-picture">
         <img src={`https://www.themealdb.com/images/ingredients/${ingredient.name}.png`}/>
       </div>
-      <p>{ingredient.name}</p>
+
+      <div className="ingredient-content">
+        <p>{ingredient.name}</p>
+
+        {ingredient.weight !== "" &&
+          <p>{`${handleIngredientWeight()} ${ingredient.unit}`}</p>
+        }
+      </div>
     </div>
   )
 };

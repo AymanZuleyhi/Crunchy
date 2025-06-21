@@ -47,12 +47,17 @@ function Account() {
     { name: "Following", active: false }
   ]);
 
-
   const fetchPostsById = async () => {
+    if(user.posts.uploaded.length === 0) {
+      setPosts([]);
+    };
+
     const url = `${backendUrl}/news-feed/get-posts-by-id`;
-    
+
     try {
-      const { data } = await axios.post(url, { postIds: user?.posts.uploaded });
+      const { data } = await axios.post(url, 
+        { postIds: user.posts.uploaded }
+      );
 
       if(data.success) {
         setPosts(data.posts);
@@ -68,7 +73,7 @@ function Account() {
     } else {
       fetchUserById(location, setUser);
     }
-  }, [userData]);
+  }, [userData, location]);
 
   const handleGoBack = () => {
     navigate(-1);
@@ -76,7 +81,7 @@ function Account() {
 
   useEffect(() => {
     fetchPostsById();
-  }, [userData, menu, user]);
+  }, [userData, menu, user, location]);
 
   if(!user) {
     return (

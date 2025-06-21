@@ -4,6 +4,9 @@ import { faHeart as faHeartRegular } from "@fortawesome/free-regular-svg-icons";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
+import { AppContext } from "../../Context/AppContext.jsx";
+import { Helpers } from "../../Context/Helpers.jsx";
+import { AppDataContext } from "../../Context/AppDataContext.jsx";
 import GoBack from "../../Components/Recipe Components/Go Back/GoBack.jsx";
 import Ingredients from "../../Components/Recipe Components/Ingredients/Ingredients.jsx";
 import CookingInsturctions from "../../Components/Recipe Components/Cooking Instructions/CookingInstructions.jsx";
@@ -12,11 +15,8 @@ import UserInformation from "../../Components/Recipe Components/User Information
 import NutritionInformation from "../../Components/Recipe Components/Nutrition Information/NutritionInformation.jsx";
 import RecipeInformation from "../../Components/Recipe Components/Recipe Information/RecipeInformation.jsx";
 import Rating from "../../Components/Recipe Components/Rating/Rating.jsx";
-import { AppContext } from "../../Context/AppContext.jsx";
-import { Helpers } from "../../Context/Helpers.jsx";
 import Images from "../../Components/Recipe Components/Images/Images.jsx";
 import Button2 from "../../Components/Button 2/Button2.jsx";
-import { AppDataContext } from "../../Context/AppDataContext.jsx";
 
 function Recipe() {
   const { backendUrl, userData, handleCheckAuth } = useContext(AppContext);

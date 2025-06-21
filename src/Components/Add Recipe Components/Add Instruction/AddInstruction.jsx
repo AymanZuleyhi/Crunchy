@@ -20,7 +20,9 @@ function AddInstruction() {
     setShowCookingSteps(!showCookingSteps);
   };
 
-  const addCookingStep = () => {
+  const addCookingStep = (e) => {
+    e.preventDefault();
+    
     setRecipe((prevRecipe) => ({
       ...prevRecipe,
       cookingInstructions: [...prevRecipe.cookingInstructions, step]
@@ -42,8 +44,17 @@ function AddInstruction() {
       <p>Add all of the cooking steps.</p>
 
       <div className="add-cooking-step">
-        <Input onChange={handleInput} value={step} placeholder={`Step ${recipe.cookingInstructions.length + 1}`} />
-        <Button type={"button"} isValid={step.trim().length !== 0} text={"Add"} onClick={addCookingStep} />
+        <Input 
+          onChange={handleInput} 
+          value={step} 
+          placeholder={`Step ${recipe.cookingInstructions.length + 1}`} 
+        />
+        
+        <Button 
+          type={step.trim().length === 0 ? "invalid" : "valid"}
+          text={"Add"} 
+          onClick={addCookingStep} 
+        />
       </div>
 
       <ShowMore text={"Cooking Step"} items={recipe.cookingInstructions} show={showCookingSteps} setterFunction={handleShowCookingSteps} />

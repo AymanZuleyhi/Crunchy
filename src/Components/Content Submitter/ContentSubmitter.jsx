@@ -22,7 +22,7 @@ function ContentSubmitter(props) {
   const [showAttachPhotos, setShowAttachPhotos] = useState(false);
   const [photos, setPhotos] = useState([]);
   const [userInput, setUserInput] = useState("");
-  const [rating, setRating] = useState();
+  const [rating, setRating] = useState(0);
 
   const handeleShowAttachPhotos = () => {
     setShowAttachPhotos(!showAttachPhotos);
@@ -106,7 +106,7 @@ function ContentSubmitter(props) {
       <Button
         onClick={handleSubmitContent} 
         text={"Submit"}
-        isValid={userInput.trim().length !== 0}
+        type={userInput.trim().length === 0 || (type === "review" && rating === 0) ? "invalid" : "valid"}
       />
     </div>
   )

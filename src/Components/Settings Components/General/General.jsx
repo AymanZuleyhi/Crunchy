@@ -24,7 +24,7 @@ function General(props) {
 
       <Button 
         onClick={() => updateInformation()} 
-        isValid={isValid} 
+        type={isValid ? "valid" : "invalid"} 
         text={"Save"}
       />
     </>

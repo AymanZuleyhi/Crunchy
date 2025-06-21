@@ -15,6 +15,7 @@ function NutritionInformation(props) {
       <div className="all-nutrients">
         {
           Object.entries(nutrition).map(([key, value] , i) => {
+            console.log(key, value)
             return (
                 <div className={`nutrient ${i%2===0 ? "even" : "odd"}`} key={`${key + value}`}>
                   <p>{key}</p>

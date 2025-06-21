@@ -51,6 +51,7 @@ function Dropdown(props) {
             options?.map((option) => {
               return (
                 <FilterDropdownOption 
+                  key={option}
                   name={name} 
                   option={option} 
                   onClick={selectOption} 

@@ -10,7 +10,6 @@ import Recipe from "../src/Pages/Recipe/Recipe.jsx";
 import NewsFeed from "../src/Pages/News feed/NewsFeed.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import SignUp from "./Pages/Sign up/SignUp.jsx";
-import Ben from "./Pages/Ben/Ben.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import BlackScreen from "./Components/Black Screen/BlackScreen.jsx";
 import VerifyOTP from "./Pages/Verify OTP/VerifyOTP.jsx";
@@ -52,7 +51,6 @@ function App() {
         <Route path="/confirm-email" element={<ConfirmEmail />} />
         <Route path="/check-security-questions" element={<CheckSecurityQuestions />} />
         <Route path="/set-new-password" element={<SetNewPassword />} />
-        <Route path="/ben" element={<Ben />} />
       </Routes>
 
       {

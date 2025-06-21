@@ -23,7 +23,7 @@ function WriteReply(props) {
 
         <Button 
           onClick={handleSubmit} 
-          isValid={ userInput.trim().length !== 0 } 
+          type={userInput.trim().length === 0 ? "invalid" : "valid"} 
           text={"Reply"}
         />
       </div>

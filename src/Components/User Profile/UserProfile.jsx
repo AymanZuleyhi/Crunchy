@@ -45,7 +45,6 @@ function UserProfile() {
   };
 
   const handleClick = (item) => {
-    console.log(userData);
     if(userData) {
       if(item.name === "Logout") {
         logoutUser();

@@ -1,6 +1,6 @@
 import "./FollowUser.css";
 import axios from "axios";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { AppContext } from "../../../Context/AppContext.jsx";
 import Button from "../../Button/Button";
 
@@ -9,7 +9,7 @@ function FollowUser(props) {
 
   const { backendUrl, handleCheckAuth } = useContext(AppContext);
 
-  const [follow, setFollow] = useState(!userData.following.includes(userId) ? true : false);
+  const [follow, setFollow] = useState(userData.following.includes(userId));
 
   const followUser = async () => {
     const url = `${backendUrl}/user/follow-user/${userId}`;
@@ -29,11 +29,15 @@ function FollowUser(props) {
     };
   };
 
+  useEffect(() => {
+    setFollow(userData.following.includes(userId));
+  }, [user])
+
   return ( 
     <Button 
       onClick={followUser}
-      text={follow ? "Follow" : "Unfollow"} 
-      follow={follow}
+      text={follow ? "Unfollow" : "Follow"} 
+      type={follow ? "Unfollow" : "Follow"}
     />
   )
 };

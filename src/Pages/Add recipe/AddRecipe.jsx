@@ -17,30 +17,11 @@ import AddIngredients from "../../Components/Add Recipe Components/Add Ingredien
 import Description from "../../Components/Add Recipe Components/Description/Description.jsx";
 import UploadRecipeImages from "../../Components/Add Recipe Components/Upload Recipe Images/UploadRecipeImages.jsx";
 
-const mealType = [    
-  "Appetizer", 
-  "Main Course", 
-  "Dessert", 
-  "Snacks", 
-  "Side Dish", 
-  "Salad", 
-  "Soup & Stew",
-  "Breakfast", 
-  "Lunch", 
-  "Dinner"
+const mealType = [
+  "Breakfast", "Brunch", "Lunch", "Dinner", "Snack", "Appetizer", "Main Course", "Side Dish", "Dessert", "Beverae"
 ];
-
-const dieteryPreference = [    
-  "Vegan", 
-  "Vegetarian", 
-  "Keto", 
-  "Gluten-Free", 
-  "Paleo", 
-  "Low-Carb", 
-  "High-Protein",
-  "Dairy-Free",
-  "Sugar-Free",
-  "Nut-Free" 
+const dieteryPreference = [
+  "Vegetarian", "Vegan", "Pescatarian", "Gluten-Free", "Keto", "Paleo", "Dairy-Free", "Low-Carb", "High-Protein", "Mediterranean"
 ];
 
 function AddRecipe() {
@@ -82,14 +63,28 @@ function AddRecipe() {
   };
 
   const checkValidity = () => {
-    const { recipeName, description, images, portionSize, cookingTime, difficultyLevel, nutrition, ingredients, cookingInstructions, mealType, dieteryPreference } = recipe;
+    const { 
+      recipeName, 
+      description, 
+      images, 
+      portionSize, 
+      cookingTime, 
+      difficultyLevel, 
+      nutrition, 
+      ingredients, 
+      cookingInstructions, 
+      mealType, 
+      dieteryPreference 
+    } = recipe;
     
     if(
       recipeName.trim().length > 0 &&
       description.trim().length > 0 &&
       images.length > 0 &&
       ingredients.length > 0 &&
-      cookingInstructions.length > 0
+      cookingInstructions.length > 0 &&
+      mealType.length > 0 &&
+      dieteryPreference.length > 0
     )
     {
       setIsValid(true);
@@ -127,7 +122,7 @@ function AddRecipe() {
         <OptionsSelector description={"Select the relevant dietery preferences."} child={"dieteryPreference"} h2={"Dietery Preference"} options={dieteryPreference} />
         
         <Button 
-          isValid={isValid}
+          type={isValid ? "valid" : "invalid"}
           text={"Submit"} 
           style={{maxWidth: "500px", width:"100%"}} />
       </form>

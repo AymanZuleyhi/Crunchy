@@ -1,8 +1,30 @@
 .FOLLOWING-USERS{
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 10px;
+  row-gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .FOLLOWING-USERS{
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .FOLLOWING-USERS{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .FOLLOWING-USERS{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+  }
 }
 
 .FOLLOWING-USERS.empty{

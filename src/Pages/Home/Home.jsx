@@ -10,11 +10,13 @@ import MobileSearchFilters from "../../Components/Mobile Search Filters/MobileSe
 const mealType = [
   "Breakfast", "Brunch", "Lunch", "Dinner", "Snack", "Appetizer", "Main Course", "Side Dish", "Dessert", "Beverae"
 ];
+
 const dieteryPreferences = [
   "Vegetarian", "Vegan", "Pescatarian", "Gluten-Free", "Keto", "Paleo", "Dairy-Free", "Low-Carb", "High-Protein", "Mediterranean"
 ];
+
 const allergens = [
-  "Peanuts", "Tree Nuts", "Dairy", "Eggs", "Gluten (Wheat)", "Soy", "Shellfish", "Fish", "Sesame", "Mustard"
+  "Peanut", "Tree Nut", "Dairy", "Egg", "Gluten", "Soy", "Shellfish", "Fish", "Sesame", "Mustard"
 ];
 
 function Home() {
@@ -28,6 +30,7 @@ function Home() {
   });
 
   const [filters, setFilters] = useState([]); 
+  const [originalRecipes, setOriginalRecipes] = useState([]);
   const [recipes, setRecipes] = useState([]);
   
   const [showMobileFilters, setShowMobileFilters] = useState(false);
@@ -37,16 +40,77 @@ function Home() {
     setShowMobileFilters(!showMobileFilters);
   };
 
-  const sortRecipes = () => {
+  const sortRecipes = (value) => {
+    const { mealType, dieteryPreferences, allergens } = selectedOptions;
     const { name, ascending } = selectedOptions?.sortBy;
 
-    if(selectedOptions.dieteryPreferences.length > 0) {
-      setRecipes((prevRecipes) => {
-        return prevRecipes.filter((recipe) => {
-          return recipe.dieteryPreference.includes(selectedOptions.dieteryPreferences)
-        });
+    if(value === "clear") {
+      setSelectedOptions({
+        mealType: [],
+        dieteryPreferences: [],
+        allergens: [],
+        sortBy: { name: "Rating", ascending: true }
       });
+
+      handleShowMobileFilters();
+      setRecipes(originalRecipes);
+      return;
     };
+
+    // If no filters are selected, show all of the recipes.
+    if(
+        mealType.length === 0 && 
+        dieteryPreferences.length === 0 && 
+        allergens.length === 0
+      ) {
+        setRecipes(originalRecipes);
+    };
+
+    setRecipes((prevRecipes) =>
+      prevRecipes.filter((recipe) => {
+        let shouldInclude = true;
+
+        if (
+          filters.length !== 0 &&
+          !filters.every(filterIngredient =>
+            recipe.ingredients.some(ingredient =>
+              ingredient.name.toLowerCase() === filterIngredient.toLowerCase()
+            )
+          )
+        ) {
+          shouldInclude = false;
+        }
+
+        if (
+          mealType.length !== 0 &&
+          !mealType.every((type) => recipe.mealType.includes(type))
+        ) {
+          shouldInclude = false;
+        }
+
+        if (
+          dieteryPreferences.length !== 0 &&
+          !dieteryPreferences.every((pref) =>
+            recipe.dieteryPreference.includes(pref)
+          )
+        ) {
+          shouldInclude = false;
+        }
+
+        if (
+          allergens.length !== 0 &&
+          allergens.some(allergen =>
+            recipe.ingredients.some(ingredient =>
+              ingredient.name.toLowerCase().includes(allergen.toLowerCase())
+            )
+          )
+        ) {
+          shouldInclude = false;
+        }
+
+        return shouldInclude;
+      })
+    );
 
     if(name === "Rating" && ascending) {
       setRecipes((prevRecipe) => {
@@ -130,6 +194,14 @@ function Home() {
     }
   }, [screenWidth])
 
+  useEffect(() => {
+    sortRecipes();
+  }, [filters])
+
+  useEffect(() => {
+    sortRecipes();
+  }, [selectedOptions.sortBy])
+
   return (
     <div className="HOME">
       <div className="hero">
@@ -170,6 +242,7 @@ function Home() {
       }
       
       <AllRecipes 
+        originalRecipes={originalRecipes} setOriginalRecipes={setOriginalRecipes}
         selectedOptions={selectedOptions} 
         filters={filters}
         screenWidth={screenWidth}

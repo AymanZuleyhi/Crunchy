@@ -3,21 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faUtensils, faHandDots, faBowlFood } from "@fortawesome/free-solid-svg-icons";
 
 const allergens = [
-  "Milk",
-  "Eggs",
-  "Fish",
-  "Shellfish",
-  "Tree nuts",
-  "Peanut",
-  "Wheat",
-  "Soy",
-  "Sesame",
-  "Gluten",
-  "Mustard",
-  "Lupin",
-  "Celery",
-  "Sulphites",
-  "Molluscs"
+  "Peanut", "Tree Nut", "Dairy", "Egg", "Gluten", "Soy", "Shellfish", "Fish", "Sesame", "Mustard"
 ];
 
 function RecipeInformation(props) {
@@ -25,22 +11,29 @@ function RecipeInformation(props) {
 
   const getAllergens = () => {
     const foundAllergens = allergens.filter(allergen =>
-      ingredients.some(ingredient =>
-        ingredient.name.toLowerCase().includes(allergen.toLowerCase())
-      )
+      ingredients.some(ingredient => {
+        const ingredientName = ingredient.name.toLowerCase();
+        const allergenName = allergen.toLowerCase();
+        return (
+          ingredientName.includes(allergenName) ||
+          allergenName.includes(ingredientName)
+        );
+      })
     );
 
-    return foundAllergens.map((allergen, i) =>
-      `${allergen} ${i !== foundAllergens.length - 1 ? "•" : ""} `
+    const listOfAllergens = foundAllergens.map((allergen, i) =>
+      `${allergen}${i !== foundAllergens.length - 1 ? " • " : ""}`
     );
+
+    return listOfAllergens.length === 0 ? "None" : listOfAllergens;
   };
 
   const values = [
     {icon: faClock, title: "Cooking Time", value: cookingTime.name},
     {icon: faHandDots, title: "Type", value: mealType[0]},
     {icon: faUtensils, title: "Difficulty level", value: difficultyLevel.name},
-    {icon: faHandDots, title: "Allergens", value: getAllergens()},
-    {icon: faBowlFood, title: "Portion Size", value: `${portionSize.quantity} ${portionSize.value}`}
+    {icon: faHandDots, title: "Allergens", value: [getAllergens()]},
+    {icon: faBowlFood, title: "Portion Size", value: `${portionSize.value} ${portionSize.quantity}`}
   ];
 
   return(
