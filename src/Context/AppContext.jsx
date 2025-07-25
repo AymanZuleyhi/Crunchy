@@ -42,12 +42,9 @@ function AppContextProvider({ children }) {
       });
       
       if(data.user) {
-        // console.log("The user info we get from the back-end", data);
         setUserData(data.user);
         setLogedIn(true);
-      } else {
-        // console.log("We could not get the user data from the back-end.", data.message);
-      }
+      };
     } catch (error) {
       setLogedIn(false);
       toast.error(data.message);

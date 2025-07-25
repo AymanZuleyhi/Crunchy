@@ -14,10 +14,10 @@ function AccountCoverPhoto(props) {
   const [isActive, setIsActive] = useState(false);
 
   const handleIsActive = () => {
-    if(user.pictures.cover === "") {
+    if(user?.pictures.cover === "") {
       handleShowUploadPicture("cover-photo");
     } else {
-       setIsActive(!isActive);
+      setIsActive(!isActive);
     };
   };
 
@@ -37,7 +37,7 @@ function AccountCoverPhoto(props) {
       <div className="cover-photo_controls">
         {user._id === userData._id &&
           <Button 
-            onClick={handleIsActive} 
+            onClick={() => handleIsActive()} 
             text={user.pictures.cover === "" ? "Add Cover Photo" : "Change Cover Photo"} 
             icon={faCamera} 
           />

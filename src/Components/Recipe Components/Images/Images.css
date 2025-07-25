@@ -18,9 +18,17 @@
   gap: 10px;
   overflow: auto;
 }
+
 .images img{
   width: calc(100% / 3.5);
   cursor: pointer;
+  object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  .images img{
+    width: calc(100% / 2.7);
+  }
 }
 
 .images img.not-active{

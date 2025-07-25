@@ -1,8 +1,10 @@
 import "./ContentSubmissionBox.css";
+import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
+import { Helpers } from "../../Context/Helpers.jsx";
+import { AppContext } from "../../Context/AppContext.jsx";
 import ProfilePicture from "../Profile Picture/ProfilePicture";
 import ContentSubmitter from "../Content Submitter/ContentSubmitter.jsx";
-import { Helpers } from "../../Context/Helpers.jsx";
 
 function ContentSubmissionBox(props) {
   const { type, fetchContent } = props;
@@ -10,7 +12,16 @@ function ContentSubmissionBox(props) {
   const [isActive, setIsActive] = useState(false);
   const { setShowBlackScreen } = useContext(Helpers);
 
+  const { logedIn } = useContext(AppContext);
+
+  const navigate = useNavigate();
+
   const handleIsActive = () => {
+    if(!logedIn) {
+      navigate("/login");
+      return;
+    }
+
     setIsActive(!isActive);
     setShowBlackScreen(isActive ? false : true);
   };

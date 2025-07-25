@@ -33,7 +33,6 @@ function MobileSearchFilters(props) {
   };
 
   const resetFilters = () => {
-
     sortRecipes("clear");
   };
 

@@ -1,6 +1,5 @@
 import "./Ingredient.css";
 import { useState, useContext } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose, faWeightScale, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { RecipeContext } from "../../../Context/RecipeContext.jsx";
 import { IngredientsContext } from "../../../Context/IngredientsContext.jsx";
@@ -15,26 +14,26 @@ function Ingredient(props) {
   const { setIngredients, setFilteredIngredients } = useContext(IngredientsContext);
 
   const [edit, setEdit] = useState(false);
-  const [userInput, setUserInput] = useState("");
-  const [unit, setUnit] = useState("oz");
+  const [userInput, setUserInput] = useState(ingredient.weight);
+
+  const [options, setOptions] = useState([
+    {name: "oz", active: true}, 
+    {name: "g", active: false}
+  ]);
 
   const handleInput = (e) => {
     setUserInput(e.target.value);
   };
 
   const handleEdit = () => {
-    if(edit) {
-      setRecipe((prevRecipe) => ({
-        ...prevRecipe,
-        ingredients: prevRecipe.ingredients.map((eachIngredient) => {
-          return eachIngredient.name === ingredient.name
-          ? {...ingredient, unit: userInput === "" ? "" : unit, weight: userInput }
-          : eachIngredient
-        })
-      }));
-    } else {
-      setUserInput("");
-    };
+    setRecipe((prevRecipe) => ({
+      ...prevRecipe,
+      ingredients: prevRecipe.ingredients.map((eachIngredient) => {
+        return eachIngredient.name === ingredient.name
+        ? {...ingredient, unit: userInput === "" ? "" : options.find((option) => option.active).name, weight: userInput }
+        : eachIngredient
+      })
+    }));
 
     setEdit(!edit);
   };
@@ -61,14 +60,15 @@ function Ingredient(props) {
       {edit &&
         <div className="edit-ingredient">
           <OptionPicker 
-            setUnit={setUnit} 
-            options={[{name: "oz", active: true}, {name: "g", active: false}]} 
+            options={options}
+            setOptions={setOptions}
           />
           
           <Input 
             placeholder={"Add weight"} 
             type={"number"} 
             onChange={handleInput}
+            value={userInput}
           />
         </div>
       }

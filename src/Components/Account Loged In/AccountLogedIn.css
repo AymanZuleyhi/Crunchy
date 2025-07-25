@@ -1,42 +1,5 @@
 .ACCOUNT_LOGEDIN{
-  gap: 15px;
-}
-
-.ACCOUNT_LOGEDIN,
-.add-recipe-button{
   display: flex;
   align-items: center;
-}
-
-.add-recipe-button{
-  gap: 5px;
-  height: var(--button-height);
-  box-shadow: var(--button-shadow);
-  border-radius: var(--button-radius);
-  padding: var(--button-padding);
-  background-color: var(--background-color2);
-  cursor: pointer;
-  transition: 0.3s ease;
-  font-weight: var(--bold);
-}
-
-.add-recipe-button:hover{
-  background-color: rgb(244, 244, 244);
-}
-
-.news-feed-button{
-  background-color: white;
-  border-radius: 50%;
-  border: none;
-  height: var(--button-height);
-  width: var(--button-height);
-  box-shadow: var(--button-shadow);
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.news-feed-button:hover{
-  background-color: rgb(244, 244, 244);
-}
-.news-feed-button svg{
-  height: 15px;
+  gap: 15px;
 }

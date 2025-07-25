@@ -1,7 +1,7 @@
 import "./ContentBox.css";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import { AppContext } from "../../Context/AppContext.jsx";
 import WriteReply from "../Recipe Components/Write Reply/WriteReply.jsx";
@@ -16,8 +16,9 @@ function ContentBox(props) {
   const { text, replies, _id } = props.content;
 
   const location = useLocation().pathname.split("/");
+  const navigate = useNavigate();
 
-  const { backendUrl } = useContext(AppContext);
+  const { backendUrl, logedIn } = useContext(AppContext);
 
   const [userInput, setUserInput] = useState("");
   const [isActive, setIsActive] = useState(false);
@@ -29,6 +30,11 @@ function ContentBox(props) {
   };
 
   const handleIsActive = () => {
+    if(!logedIn) {
+      navigate("/login");
+      return;
+    };
+
     setIsActive(!isActive);
     setUserInput("");
   };

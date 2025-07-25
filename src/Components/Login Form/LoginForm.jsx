@@ -63,7 +63,6 @@ function LoginForm() {
       withCredentials: true
     });
 
-    console.log(data);
     if(!data.success) {
       setValues({
         email: values.email,

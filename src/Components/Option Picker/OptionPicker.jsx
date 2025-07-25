@@ -1,16 +1,16 @@
 import "./OptionPicker.css";
 
 function OptionPicker(props) {
-  const { options, setUnit } = props;
+  const { options, setOptions } = props;
 
-  const selectOption = (option) => {
-    setUnit((prevValues) => {
-      return prevValues.map((eachOption) => {
-        return eachOption.name === option
-        ? {...eachOption, active: true}
-        : {...eachOption, active: false}
-      });
-    });
+  const selectOption = (optionName) => {
+    setOptions((prevOptions) => {
+      return prevOptions.map((option) => {
+        return option.name === optionName
+        ? { ...option, active: true }
+        : { ...option, active: false }
+      })
+    })
   };
 
   return(

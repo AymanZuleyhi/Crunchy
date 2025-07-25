@@ -1,6 +1,7 @@
 import "./CheckSecurityQuestions.css";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { AppContext } from "../../Context/AppContext.jsx";
 import { SecurityFlowContext } from "../../Context/SecurityFlowContext.jsx";
@@ -10,8 +11,11 @@ import Button from "../Button/Button.jsx";
 function CheckSecurityQuestions() {
   const { backendUrl } = useContext(AppContext);
   const { flowType, email } = useContext(SecurityFlowContext);
+
   const [securityQuestions, setSecurityQuestions] = useState();
   const [isValid, setIsValid] = useState(false);
+
+  const navigate = useNavigate();
 
   const getSecurityQuestions = async () => {
     const url = `${backendUrl}/auth/get-security-questions`;

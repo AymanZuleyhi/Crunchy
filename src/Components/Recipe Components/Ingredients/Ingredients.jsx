@@ -19,7 +19,7 @@ function Ingredients(props) {
         
         <div className="serving-size">
           <p>Serving size</p>
-          <OptionPicker options={options} setUnit={setOptions} />
+          <OptionPicker options={options} setOptions={setOptions} />
         </div>
       </div>
       

@@ -48,7 +48,7 @@ function Account() {
   ]);
 
   const fetchPostsById = async () => {
-    if(user.posts.uploaded.length === 0) {
+    if(user?.posts.uploaded.length === 0) {
       setPosts([]);
     };
 
@@ -56,7 +56,7 @@ function Account() {
 
     try {
       const { data } = await axios.post(url, 
-        { postIds: user.posts.uploaded }
+        { postIds: user?.posts.uploaded }
       );
 
       if(data.success) {

@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileImage, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { useRef, useContext } from "react";
 import { AppContext } from "../../../Context/AppContext";
-import { Helpers } from "../../../Context/Helpers";
 
 const optoions = [
   { icon: faFileImage, text: "Change" }, 
@@ -14,10 +13,7 @@ const optoions = [
 function RemoveOrChangeCoverPhoto(props) {
   const { handleShowUploadPicture, setIsActive, type } = props;
 
-  const { handleClickOutside } = useContext(Helpers);
   const { backendUrl } = useContext(AppContext);
-
-  const uploadRef = useRef(null);
 
   const removeCoverPhoto = async () => {
     const url = `${backendUrl}/user/remove-cover-profile-photo`;
@@ -46,18 +42,8 @@ function RemoveOrChangeCoverPhoto(props) {
     };
   };
 
-  useEffect(() => {
-    const clickHandler = (e) => handleClickOutside(e, uploadRef, setIsActive);
-
-    document.addEventListener("click", clickHandler);
-    
-    return () => {
-      removeEventListener("click", clickHandler);
-    };
-  }, [])
-
   return (
-    <div ref={uploadRef} className="REMOVE-CHANGE-COVER-PHOTO">
+    <div className="REMOVE-CHANGE-COVER-PHOTO">
       {optoions.map((option) => {
         return (
           <div onClick={() => handeClick(option)} key={option.text}>
