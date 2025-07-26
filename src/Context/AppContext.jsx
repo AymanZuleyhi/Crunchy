@@ -29,7 +29,6 @@ function AppContextProvider({ children }) {
         setLogedIn(false);
       }
     } catch(error) {
-      toast.error(data.message);
     }
   };
 
