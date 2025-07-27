@@ -8,6 +8,12 @@
   gap: 10px;
 }
 
+@media (max-width: 600px) {
+  .serving-size_text{
+    display: none;
+  }
+}
+
 .ingredients_headline{
   display: flex;
   align-items: center;
