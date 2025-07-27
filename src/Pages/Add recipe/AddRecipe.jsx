@@ -10,7 +10,7 @@ import DifficultyLevel from "../../Components/Add Recipe Components/Difficulty L
 import RecipeName from "../../Components/Add Recipe Components/Recipe Name/RecipeName.jsx";
 import OptionsSelector from "../../Components/Add Recipe Components/Options Selector/OptionsSelector.jsx";
 import AddInstruction from "../../Components/Add Recipe Components/Add Instruction/AddInstruction.jsx";
-import CookingTime from "../../Components/Add Recipe Components/Cooking Time/CookingTime.jsx";
+import CookingTime from "../../Components/Add Recipe Components/CookingTime/CookingTime.jsx";
 import PortionSize from "../../Components/Add Recipe Components/Portion Size/PortionSize.jsx";
 import Button from "../../Components/Button/Button.jsx";
 import AddIngredients from "../../Components/Add Recipe Components/Add Ingredients/AddIngredients.jsx";
