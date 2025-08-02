@@ -6,6 +6,7 @@ function HelpersProviders({ children }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [showSpinner, setShowSpinner] = useState(false);
   const [showBlackScreen, setShowBlackScreen] = useState(false);
+  const [serverLoading, setServerLoading] = useState(true);
 
   const handleClickOutside = (e, ref, setIsActive) => {
     if(ref.current === null) {
@@ -46,7 +47,8 @@ function HelpersProviders({ children }) {
     showBlackScreen, setShowBlackScreen,
     showSpinner, setShowSpinner,
     handleClickOutside,
-    formatDate
+    formatDate,
+    serverLoading, setServerLoading
   };
 
   return (

@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import { useContext } from "react";
 import NavBar from "./Components/Nav bar/NavBar.jsx";
 import Home from "./Pages/Home/Home.jsx";
 import Account from "../src/Pages/Account/Account.jsx";
@@ -20,12 +21,20 @@ import ConfirmEmail from "./Components/Confirm Email/ConfirmEmail.jsx";
 import CheckSecurityQuestions from "./Components/Check Security Questions/CheckSecurityQuestions.jsx";
 import SetNewPassword from "./Components/Set New Password/SetNewPassword.jsx";
 import LoadingSpinner from "./Components/Loading Spinner/LoadingSpinner.jsx";
+import ServerLoading from "./Components/Server Loading/ServerLoading.jsx";
+import { Helpers } from "./Context/Helpers.jsx";
 
 function App() {
   const location = useLocation().pathname;
+
+  const { serverLoading } = useContext(Helpers);
   
   return (
     <div className={`BODY ${location === "/" ? "home" : "notHome" }`}>
+      {serverLoading && 
+        <ServerLoading />
+      }
+      
       <LoadingSpinner />
       <NavBar />
       <BlackScreen />
