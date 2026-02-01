@@ -11,7 +11,6 @@ import LoginInput from "../Login Input/LoginInput.jsx";
 function ConfirmPassword() {
   const { backendUrl, userData } = useContext(AppContext);
   const { isText, flowType, email, setEmail } = useContext(SecurityFlowContext);
-  console.log(isText);
   const [userInput, setUserInput] = useState("");
 
   const navigate = useNavigate();
@@ -29,7 +28,7 @@ function ConfirmPassword() {
       const { data } = await axios.post(url, 
         { email, flowType, userInput },
       );
-
+      
       if(data.success) {
         setEmail(data.email);
         navigate("/verify");
@@ -38,14 +37,13 @@ function ConfirmPassword() {
         toast.error(data.message);
       };
     } catch (error) {
-      console.error(error.message);
     }
   };
 
   return (
     <form onSubmit={handleCheckInformation} className="CONFIRM-PASSWORD">
       <h1>Verify that it's you</h1>
-      <p>{`Hey, ${userData?.name}! 👋 Before we can change any information on your account, we need to make sure it's actually you.`}</p>
+      <p>{`Hey! 👋 Before we can change any information on your account, we need to make sure it's actually you.`}</p>
       
       <p>{`Please enter your ${isText ? "email" : "password"} bellow.`}</p>
 

@@ -59,7 +59,7 @@ function Questions(props) {
       }
 
       {data.length === 0 &&
-        <p>{`There are currently no ${type === "qustion" ? "questions" : "reviews"} 😟`}</p>
+        <p>{`There are currently no ${type === "question" ? "questions" : "reviews"} 😟`}</p>
       }
 
     </div>
